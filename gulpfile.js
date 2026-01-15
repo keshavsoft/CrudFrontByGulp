@@ -484,7 +484,10 @@ gulp.task("end:dist", async () => {
 gulp.task("end:distForProtected:dist", async () => {
     fse.copySync(`${paths.src.base}/Js`, `${paths.distForProtected.base}/Js`);
 
-    StartFuncFromDistForProtected({ inDistPath: paths.distForProtected.base });
+    StartFuncFromDistForProtected({
+        inDistPath: paths.distForProtected.base,
+        inCommonColumns: CommonColumns
+    });
 
     return await true;
 });
