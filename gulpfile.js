@@ -30,7 +30,7 @@ var rename = require('gulp-rename');
 const fse = require("fs-extra");
 const { options: optionsObject } = require("./options");
 const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/entryFile");
-const { StartFunc: StartFuncFromDistForProtected } = require("./GulpCode/DistForProtected/entryFile");
+const { StartFunc: StartFuncFromDistForProtected } = require("./GulpCode/ToDist/entryFile");
 
 var dotenv = require("dotenv");
 dotenv.config();

@@ -217,3 +217,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.2
 
 - GenFromPkWithMeta perfect with UI
+
+### 1.1.3
+
+- GulpCode/ToDist added
