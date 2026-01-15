@@ -1,5 +1,7 @@
+import EndPointJson from './endPoint.json' with {type: 'json'};
+
 let StartFunc = async () => {
-    let jVarLocalFetchUrl = "/Secret/Logout";
+    let jVarLocalFetchUrl = EndPointJson.GetEndPoint;
 
     let response = await fetch(jVarLocalFetchUrl);
 

@@ -30,6 +30,7 @@ var rename = require('gulp-rename');
 const fse = require("fs-extra");
 const { options: optionsObject } = require("./options");
 const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/entryFile");
+const { StartFunc: StartFuncFromDistForProtected } = require("./GulpCode/DistForProtected/entryFile");
 
 var dotenv = require("dotenv");
 dotenv.config();
@@ -86,35 +87,6 @@ const paths = {
         vendor: "./.temp/vendor",
     },
 };
-
-// var templateData = {
-//     TableName: CommonColumns.tableName,
-//     firstName: 'KeshavSoft',
-//     Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }],
-//     SideBarItems: SideBarItems,
-//     SideBarForCalender: SideBarForCalender,
-//     TableColumns: CommonColumns.columns,
-//     columns: CommonColumns.columns,
-//     DataTableOptions: CommonColumns.DataTableOptions,
-//     SideBarForImport: CommonSideBarsImportJson,
-//     pathFromGulp: "../..",
-//     SideBarItemsForShowAll: SideBarItemsForShowAll,
-//     SideBarForRead: SideBarForRead,
-//     SideBarItemsforCreate: SideBarItemsforCreate,
-//     SideBarItemsforDelete: SideBarItemsforDelete,
-//     SideBarItemsforAlter: SideBarItemsforAlter,
-//     SideBarItemsforDownload: SideBarItemsforDownload,
-//     SideBarItemsforCards: SideBarItemsforCards,
-//     SideBarItemsforCharts: SideBarItemsforCharts,
-//     SideBarItemsForGroupBy: SideBarItemsForGroupBy,
-//     SideBarItemsforSubObjShow: SideBarItemsforSubObjShow,
-//     SideBarItemsforSubArrayShow: SideBarItemsforSubArrayShow,
-//     SideBarItemsforCreateWithChecks: SideBarItemsforCreateWithChecks,
-//     SideBarItemsForShowAllSortDesc: SideBarItemsForShowAllSortDesc,
-//     SideBarItemsForCrud: SideBarItemsForCrud,
-//     SideBarItemsForCrudWithCheck: SideBarItemsForCrudWithCheck
-// };
-
 
 var templateData = StartFuncFromForTemplateData({ inCommonColumns: CommonColumns });
 
@@ -512,50 +484,10 @@ gulp.task("end:dist", async () => {
 gulp.task("end:distForProtected:dist", async () => {
     fse.copySync(`${paths.src.base}/Js`, `${paths.distForProtected.base}/Js`);
 
-    LocalFuncChangeJsConfig({ inDistPath: paths.distForProtected.base });
+    StartFuncFromDistForProtected({ inDistPath: paths.distForProtected.base });
 
     return await true;
 });
-
-const LocalFuncChangeJsConfig = ({ inDistPath }) => {
-    const CommonVersionCode = "$ApiVersion";
-    const CommonTableNameCode = "$TableName";
-
-    const LocalDistPath = inDistPath;
-
-    const filePath = `${LocalDistPath}/Js/Config.json`;
-
-    const content = fse.readFileSync(filePath, 'utf-8');
-    const contentAsJson = JSON.parse(content);
-
-    contentAsJson.columns = CommonColumns.columns;
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
-
-    contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
-
-    fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
-};
-
-const LocalFuncChangeJsConfigForProtected = ({ inDistPath }) => {
-    const CommonVersionCode = "$ApiVersion";
-    const CommonTableNameCode = "$TableName";
-
-    const LocalDistPath = inDistPath;
-
-    const filePath = `${LocalDistPath}/Js/Config.json`;
-
-    const content = fse.readFileSync(filePath, 'utf-8');
-    const contentAsJson = JSON.parse(content);
-
-    contentAsJson.columns = CommonColumns.columns;
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `S${process.env.VERSION}`);
-
-    contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
-
-    fse.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
-};
 
 gulp.task("build:dev", gulp.series("clean:dev", "copy:dev:css", "copy:dev:html", "copy:dev:html:index", "copy:dev:assets", "copy:dev:js", "beautify:css", "copy:dev:vendor"));
 
