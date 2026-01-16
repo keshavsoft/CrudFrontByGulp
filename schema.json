@@ -1,59 +1,73 @@
 {
-    "tableName": "TasksTable",
+    "tableName": "Openings",
     "columns": [
         {
-            "field": "title",
-            "title": "Title",
-            "unique": true,
-            "type": "text",
-            "isInput": true,
-            "isAutoFocus": true,
-            "defaultvalue": "2nd"
-        },
-        {
-            "field": "start",
-            "title": "Start Date",
-            "unique": false,
-            "type": "date",
-            "isDate": true,
-            "WidthOptions": {
-                "inPx": 200
-            }
-        },
-        {
-            "field": "className",
-            "title": "Class Name",
-            "unique": false,
-            "type": "text",
+            "field": "AccountName",
+            "title": "Account Name",
             "isInput": false,
-            "isSelect": true,
-            "isDataList": false,
-            "selectOptions": [
-                {
-                    "value": "bg-primary",
-                    "text": "bg-primary"
-                },
-                {
-                    "value": "bg-success",
-                    "text": "bg-success"
-                }
-            ],
-            "WidthOptions": {
-                "inPx": 250
-            }
+            "filterControl": "select",
+            "autoFocus": true,
+            "isAutoFocus": true,
+            "isDataList": true
+        },
+        {
+            "field": "Description",
+            "title": "Description",
+            "isInput": true
+        },
+        {
+            "field": "Credit",
+            "title": "Credit",
+            "type": "number",
+            "isNumber": true,
+            "filterControl": "select",
+            "showRupee": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true,
+            "align": "right",
+            "minusColumn": "Debit"
+        },
+        {
+            "field": "Debit",
+            "title": "Debit",
+            "type": "number",
+            "isNumber": true,
+            "filterControl": "select",
+            "showRupee": true,
+            "numberConfig": {
+                "step": "0.01",
+                "min": "0",
+                "max": "999999999"
+            },
+            "footerFormatter": "TotalFormatter",
+            "ShowTotal": true,
+            "ShowDifference": true,
+            "align": "right",
+            "minusColumn": "Credit"
         }
     ],
     "data": [],
     "Vertical": [],
-    "DataTableOptions": {
-        "Header": {
-            "autoFocus": "title"
-        }
+    "NonSecured": {
+        "SubRoutes": [
+            "Read",
+            "Insert",
+            "Delete",
+            "Alter"
+        ]
     },
     "Secured": {
         "SubRoutes": [
             "Read",
-            "Insert"
+            "Insert",
+            "Delete",
+            "Alter"
         ]
     }
 }
