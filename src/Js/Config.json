@@ -122,6 +122,7 @@
     "Protected": {
         "RedirectUrl1": "../Authentication/sign-in.html",
         "RedirectUrl2": "../Authentication/signInV1.html",
-        "RedirectUrl": "../Authentication/signInV2.html"
+        "RedirectUrl": "../Authentication/signInV2.html",
+        "RedirectUrl3": "../Authentication/signInV3.html"
     }
 }

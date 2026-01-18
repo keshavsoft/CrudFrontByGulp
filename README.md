@@ -225,3 +225,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.4
 
 - CreateWithDL.footerDL datalist fill fixed and need to work on general code for this
+
+### 1.1.5
+
+- RepoType added in env and in last dist : GulpCode/ToDist
