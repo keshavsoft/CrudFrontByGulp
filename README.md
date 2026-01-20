@@ -229,3 +229,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.5
 
 - RepoType added in env and in last dist : GulpCode/ToDist
+
+### 1.1.6
+
+- Versioning started and general DependantTablesClass started
