@@ -1,7 +1,7 @@
-import { StartFunc as StartFuncForLogout } from "./ForDependantTablesClass/entryFile.js";
+import { StartFunc as StartFuncForDependantTablesClass } from "./ForDependantTablesClass/entryFile.js";
 
 const StartFunc = () => {
-    StartFuncForLogout();
+    StartFuncForDependantTablesClass();
 };
 
 StartFunc();
