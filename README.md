@@ -233,3 +233,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.6
 
 - Versioning started and general DependantTablesClass started
+
+### 1.1.7
+
+- name changed
