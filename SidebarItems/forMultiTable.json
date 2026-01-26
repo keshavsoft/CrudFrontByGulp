@@ -10,5 +10,17 @@
         "DisplayName": "V1",
         "IconClass": "bi bi-speedometer2",
         "SpanClass": "text-danger"
+    },
+    {
+        "Name": "V2",
+        "DisplayName": "V2",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "DLV3",
+        "DisplayName": "V3",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
     }
 ]
