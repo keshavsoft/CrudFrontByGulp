@@ -31,6 +31,7 @@ const fse = require("fs-extra");
 const { options: optionsObject } = require("./options");
 // const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/entryFile");
 const { StartFunc: StartFuncFromDistForProtected } = require("./GulpCode/ToDist/entryFile");
+const { StartFunc: StartFuncFromUnProtected } = require("./GulpCode/RunLast/UnProtected/entryFile");
 
 const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/V1/entryFile");
 
@@ -478,7 +479,11 @@ gulp.task("copy:dev:vendor", function () {
 gulp.task("end:dist", async () => {
     fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
 
-    LocalFuncChangeJsConfig({ inDistPath: paths.dist.base });
+    // LocalFuncChangeJsConfig({ inDistPath: paths.dist.base });
+    StartFuncFromUnProtected({
+        inDistPath: paths.dist.base,
+        inCommonColumns: CommonColumns
+    });
 
     return await true;
 });
