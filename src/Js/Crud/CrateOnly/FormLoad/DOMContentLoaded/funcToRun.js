@@ -3,9 +3,18 @@ import { StartFunc as StartFuncFromBuildBSTables } from "./BuildBSTables/entryFi
 import { StartFunc as StartFuncFromShowOnDom } from "./showOnDom.js";
 
 let StartFunc = () => {
+    LocalFunc();
     StartFuncFromAddListeners();
     StartFuncFromBuildBSTables();
     StartFuncFromShowOnDom();
+};
+
+const LocalFunc = () => {
+    let myElements = document.getElementsByClassName('DependantTablesClass');
+
+    for (let i = 0; i < myElements.length; i++) {
+        myElements[i].click();
+    };
 };
 
 export { StartFunc };

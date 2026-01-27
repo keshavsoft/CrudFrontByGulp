@@ -241,3 +241,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.8
 
 - GulpCode/RunLast/UnProtected need to test
+
+### 1.1.9
+
+- Crud/CrateOnly perfect with datalist 

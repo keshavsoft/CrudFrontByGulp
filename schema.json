@@ -8,7 +8,8 @@
             "filterControl": "select",
             "autoFocus": true,
             "isAutoFocus": true,
-            "isDataList": true
+            "isDataList": true,
+            "dataListId": "AccountNames"
         },
         {
             "field": "Description",
