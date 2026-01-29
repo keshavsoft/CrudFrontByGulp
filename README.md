@@ -245,3 +245,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.9
 
 - Crud/CrateOnly perfect with datalist 
+
+### 1.1.10
+
+- Alter/Update Js changed redirect perfect for 200
