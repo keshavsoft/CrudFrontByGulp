@@ -16,6 +16,7 @@ const StartFunc = ({ inDistPath, inCommonColumns }) => {
     contentAsJson.Protected.RedirectUrl = contentAsJson.Protected.RedirectUrl3;
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
+    contentAsJson.ForeignkeyTables = CommonColumns.ForeignkeyTables;
 
     fs.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };

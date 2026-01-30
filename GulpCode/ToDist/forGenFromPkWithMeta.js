@@ -17,6 +17,7 @@ const StartFunc = ({ inDistPath, inCommonColumns }) => {
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
+    contentAsJson.ForeignkeyTables = CommonColumns.ForeignkeyTables;
 
     fs.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };

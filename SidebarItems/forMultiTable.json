@@ -22,5 +22,11 @@
         "DisplayName": "V3",
         "IconClass": "bi bi-speedometer2",
         "SpanClass": "text-danger"
+    },
+    {
+        "Name": "DLV4",
+        "DisplayName": "V4",
+        "IconClass": "bi bi-table",
+        "SpanClass": "text-danger"
     }
 ]
