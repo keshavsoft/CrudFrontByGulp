@@ -3,6 +3,7 @@ import { StartFunc as StartFuncFromBuildBSTables } from "./BuildBSTables/entryFi
 import { StartFunc as StartFuncFromShowOnDom } from "./showOnDom.js";
 
 let StartFunc = () => {
+    // debugger;
     LocalFunc();
     StartFuncFromAddListeners();
     StartFuncFromBuildBSTables();

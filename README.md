@@ -249,3 +249,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.10
 
 - Alter/Update Js changed redirect perfect for 200
+
+### 1.1.11
+
+- Js Crud/CratOnly localstorage key fixed

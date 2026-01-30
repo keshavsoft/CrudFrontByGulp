@@ -18,16 +18,18 @@ let StartFunc = () => {
 };
 
 const LocalFunc = ({ inTableName }) => {
-    const carArray = localStorage.getItem(inTableName);
-    const jVarLocalParsedArray = JSON.parse(carArray);
-    const jVarLocalHtmlDataList = document.getElementById(`HtmlDLId-${inTableName}`);
-    const jVarLocalField = jVarLocalHtmlDataList.dataset.field;
+    if (localStorage.hasOwnProperty(inTableName)) {
+        const carArray = localStorage.getItem(inTableName);
+        const jVarLocalParsedArray = JSON.parse(carArray);
+        const jVarLocalHtmlDataList = document.getElementById(`HtmlDLId-${inTableName}`);
+        const jVarLocalField = jVarLocalHtmlDataList.dataset.field;
 
-    jVarLocalParsedArray.forEach(function (item) {
-        const option = document.createElement('option');
-        option.value = item[jVarLocalField];
-        jVarLocalHtmlDataList.appendChild(option);
-    });
+        jVarLocalParsedArray.forEach(function (item) {
+            const option = document.createElement('option');
+            option.value = item[jVarLocalField];
+            jVarLocalHtmlDataList.appendChild(option);
+        });
+    };
 };
 
 export { StartFunc };
