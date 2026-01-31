@@ -22,6 +22,7 @@ const SideBarItemsForShowAllSortDesc = require("../../SidebarItems/forShowAllSor
 const SideBarItemsForCrud = require("../../SidebarItems/forCrud.json");
 const SideBarItemsForCrudWithCheck = require("../../SidebarItems/forCrudWithCheck.json");
 const SideBarItemsForMultiTable = require("../../SidebarItems/forMultiTable.json");
+const SideBarItemsforRelationshipTables = require("../../SidebarItems/forRelationshipTables.json");
 
 const StartFunc = ({ inCommonColumns }) => {
     var templateData = {
@@ -50,7 +51,8 @@ const StartFunc = ({ inCommonColumns }) => {
         SideBarItemsForShowAllSortDesc: SideBarItemsForShowAllSortDesc,
         SideBarItemsForCrud: SideBarItemsForCrud,
         SideBarItemsForCrudWithCheck: SideBarItemsForCrudWithCheck,
-        SideBarItemsForMultiTable: SideBarItemsForMultiTable
+        SideBarItemsForMultiTable: SideBarItemsForMultiTable,
+        SideBarItemsforRelationshipTables: SideBarItemsforRelationshipTables
     };
 
     return templateData;

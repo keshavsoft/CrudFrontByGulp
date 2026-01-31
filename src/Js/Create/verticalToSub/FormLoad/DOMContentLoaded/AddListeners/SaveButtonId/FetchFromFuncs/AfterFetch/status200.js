@@ -3,7 +3,7 @@ import CommonConfig from '../../../../../../../../Config.json' with { type: 'jso
 const StartFunc = ({ inRowPk }) => {
     const jVarLocalCommonVersion = CommonConfig.TableName.split("/")[2].replace("S", "")
     let jVarLocalForeignkeyTables = CommonConfig.ForeignkeyTables[0];
-    window.location.href = `/${jVarLocalCommonVersion}/${jVarLocalForeignkeyTables}/protected/pages/MultiTable/DLV4.html?inRowPk=${inRowPk}`;
+    window.location.href = `/${jVarLocalCommonVersion}/${jVarLocalForeignkeyTables}/protected/pages/RelationshipTables/V1.html?inRowPk=${inRowPk}`;
 };
 
 export { StartFunc };
