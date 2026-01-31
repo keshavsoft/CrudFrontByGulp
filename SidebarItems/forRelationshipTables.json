@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+     {
+        "Name": "V1",
+        "DisplayName": "V1",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    }
+]
