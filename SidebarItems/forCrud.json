@@ -28,5 +28,17 @@
         "DisplayName": "CreateDelAndAlt",
         "IconClass": "bi bi-person-plus",
         "SpanClass": "text-warning"
+    },
+    {
+        "Name": "vertical",
+        "DisplayName": "Vertical",
+        "IconClass": "bi bi-vector-pen",
+        "SpanClass": "text-info"
+    },
+    {
+        "Name": "multiTable",
+        "DisplayName": "MultiTable",
+        "IconClass": "bi bi-bricks",
+        "SpanClass": "text-success"
     }
 ]
