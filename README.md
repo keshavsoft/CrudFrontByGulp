@@ -253,3 +253,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.11
 
 - Js Crud/CratOnly localstorage key fixed
+
+### 1.1.12
+
+- Js Sort new added with static side bar
