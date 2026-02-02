@@ -257,3 +257,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.12
 
 - Js Sort new added with static side bar
+
+### 1.1.13
+
+- Sort/imagePageSmsTop10 added perfect 
