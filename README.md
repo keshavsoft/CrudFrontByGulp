@@ -261,3 +261,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.13
 
 - Sort/imagePageSmsTop10 added perfect 
+
+### 1.1.14
+
+- Sort/imagePageSmsTop10 Logout perfect
