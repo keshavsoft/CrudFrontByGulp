@@ -6,8 +6,14 @@
         "SpanClass": "text-danger"
     },
      {
-        "Name": "V1",
-        "DisplayName": "V1",
+        "Name": "verticalV1",
+        "DisplayName": "vertical",
+        "IconClass": "bi bi-pen",
+        "SpanClass": "text-sucess"
+    },
+    {
+        "Name": "multiTableV1",
+        "DisplayName": "multiTable",
         "IconClass": "bi bi-speedometer2",
         "SpanClass": "text-danger"
     }
