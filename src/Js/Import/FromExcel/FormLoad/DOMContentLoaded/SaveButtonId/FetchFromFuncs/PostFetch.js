@@ -5,11 +5,10 @@ let StartFunc = async () => {
     let LocaltableName = UrlJson.TableName;
 
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
-    let jVarLocalFetchUrl = `${LocaltableName}/Insert/BulkAsIs`;
+    let jVarLocalFetchUrl = `${LocaltableName}/Import/AsIs`;
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
     
     return await response;
 };
 
 export { StartFunc };
-

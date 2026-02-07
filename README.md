@@ -265,3 +265,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.14
 
 - Sort/imagePageSmsTop10 Logout perfect
+
+### 1.1.15
+
+- Import FromExcel perfect with Api/Import
