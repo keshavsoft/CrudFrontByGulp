@@ -269,3 +269,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.15
 
 - Import FromExcel perfect with Api/Import
+
+### 1.1.16
+
+- Link:Maps perfect 

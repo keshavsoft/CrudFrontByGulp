@@ -1,21 +1,3 @@
-<!--
-
-=========================================================
-* Volt Free - Bootstrap 5 Dashboard
-=========================================================
-
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
-* Copyright 2021 Themesberg (https://www.themesberg.com)
-* License (https://themesberg.com/licensing)
-
-* Designed and coded by https://themesberg.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
-
--->
-
 <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
     <div class="sidebar-inner px-4 pt-3">
         <div
@@ -26,7 +8,7 @@
                         class="card-img-top rounded-circle border-white" alt="Bonnie Green">
                 </div>
                 <div class="d-block">
-                    <h2 class="h5 mb-3">Hi, Keshav</h2>
+                    <h2 class="h5 mb-3">Hi, Jane</h2>
                     <a href="{{path}}/pages/examples/sign-in.html"
                         class="btn btn-secondary btn-sm d-inline-flex align-items-center">
                         <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -55,55 +37,42 @@
             <li class="nav-item">
                 <a href="{{path}}/index.html" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon">
-                        <img src="../assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
+                        <img src="{{path}}/assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">KeshavSoft</span>
+                    <span class="mt-1 ms-1 sidebar-text">{{DisplayName}}</span>
                 </a>
             </li>
-            <li class="nav-item @@if (context.page === 'index') { active }">
-                <a href="./" class="nav-link">
-                    <span class="sidebar-icon text-danger">
-                        <i class="bi bi-speedometer2"></i>
-                    </span>
-                    <span class="sidebar-text">Dashboard</span>
-                </a>
-            </li>
-            <li class="nav-item"><a href="../../" class="nav-link"><span class="sidebar-icon text-warning"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <li class="nav-item">
+                <a href="../" class="nav-link">
+                    <span class="sidebar-icon text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
-                                d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z">
-                            </path>
-                        </svg> </span><span class="sidebar-text">Parent</span></a>
+                                d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z" />
+                        </svg>
+                    </span>
+                    <span class="sidebar-text">Parent</span>
+                </a>
             </li>
 
             <li class="nav-item">
-                <a href="./Sort/imagePageSms.html" class="nav-link d-flex justify-content-between">
+                <a href="maps.html" class="nav-link d-flex justify-content-between">
                     <span>
                         <span class="sidebar-icon text-success">
                             <i class="bi bi-columns-gap"></i>
                         </span>
-                        <span class="sidebar-text">Sort</span>
+                        <span class="sidebar-text">Maps</span>
                     </span>
                 </a>
             </li>
+
             <li class="nav-item">
-                <a href="./RelationshipTables/verticalV1.html" class="nav-link d-flex justify-content-between">
+                <a href="imagePageSmsTop10.html" class="nav-link d-flex justify-content-between">
                     <span>
-                        <span class="sidebar-icon text-info">
-                            <i class="bi bi-table"></i>
+                        <span class="sidebar-icon text-success">
+                            <i class="bi bi-columns-gap"></i>
                         </span>
-                        <span class="sidebar-text">RelationshipTables</span>
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./Link/maps.html" class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon text-info">
-                            <i class="bi bi-table"></i>
-                        </span>
-                        <span class="sidebar-text">Link</span>
+                        <span class="sidebar-text">imagePageSmsTop10</span>
                     </span>
                 </a>
             </li>
