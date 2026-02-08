@@ -273,3 +273,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.16
 
 - Link:Maps perfect 
+
+### 1.1.17
+
+- Index manu added

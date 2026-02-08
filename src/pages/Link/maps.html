@@ -66,8 +66,7 @@
                                 </th>
                                 {{/each}}
 
-                                <th data-field="KS-Image" data-formatter="window.GlobalOptionsFormatter">Options</th>
-
+                                <th data-formatter="window.GlobalOptionsFormatter">Maps</th>
                             </tr>
                         </thead>
                     </table>
@@ -86,15 +85,13 @@
 
 
             window.GlobalOptionsFormatter = (value, row, index) => {
-                console.log("aaaaaaaaa : ", value, row, index);
-
                 return [
-                    `<a href="https://www.google.com/maps?q=${row.gpsLat},${row.gpsLng}" target="_blank" title="image">`,
+                    `<a href="https://www.google.com/maps?q=${row?.gpsLat},${row?.gpsLng}" target="_blank" title="image">`,
                     `<i class="bi bi-image text-warning"></i>`,
                     `</a>`
                 ].join('');
             };
-            
+
             window.GlobalOptionsFormatter_8Feb2026 = (value, row, index) => {
                 return [
                     `<a href="#" class="link btn" title="image">`,
