@@ -25,16 +25,18 @@
 
   {{!-- Datalist Input --}}
   {{#if isDataList}}
-  <input type="text" class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLId-{{field}}" {{#if
+  <input type="text" class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLId-{{dataListId}}" {{#if
     autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}} {{#if
     isAutoFocus}} autofocus {{/if}} {{#if defaultvalue}} value="{{defaultvalue}}" {{/if}} {{#if
     required}}required{{/if}} />
-  <datalist id="HtmlDLId-{{field}}" data-field="{{field}}">
+  <datalist id="HtmlDLId-{{dataListId}}" data-field="{{field}}">
     {{#each selectOptions}}
     <option value="{{this.value}}">{{this.text}}</option>
     {{/each}}
   </datalist>
-  {{else if isDataListEmpty}}
+  {{/if}}
+  
+  {{#if isDataListEmpty}}
   <input class="form-control" id="HtmlId-{{field}}" name="{{field}}" list="HtmlDLEId-{{field}}" />
   <datalist id="HtmlDLEId-{{field}}"></datalist>
   {{/if}}

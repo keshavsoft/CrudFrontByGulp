@@ -29,12 +29,6 @@
                 "DisplayName": "footerWT",
                 "IconClass": "bi bi-eye",
                 "SpanClass": "text-success"
-            },
-            {
-                "SubItemName": "crud",
-                "DisplayName": "crud",
-                "IconClass": "bi bi-eye",
-                "SpanClass": "text-success"
             }
         ]
     },
