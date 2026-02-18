@@ -2,6 +2,7 @@ import { StartFunc as StartFuncFromAddListeners } from "./AddListeners/entryFile
 import { StartFunc as StartFuncFromBuildBSTables } from "./BuildBSTables/entryFile.js";
 import { StartFunc as StartFuncFromShowOnDom } from "./showOnDom.js";
 import { StartFunc as StartFuncFromRowDataFromGet } from "./RowDataFromGet/Entry.js";
+import { StartFunc as StartFuncForEnterKeyCalculation } from "./ForEnterKeyCalculation/entryFie.js";
 
 let StartFunc = () => {
     LocalFunc();
@@ -9,6 +10,7 @@ let StartFunc = () => {
     StartFuncFromBuildBSTables();
     StartFuncFromShowOnDom();
     StartFuncFromRowDataFromGet();
+    StartFuncForEnterKeyCalculation()
 };
 
 const LocalFunc = () => {
