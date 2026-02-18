@@ -18,7 +18,7 @@
                 required}}required{{/if}} {{#if numberConfig}}step="{{numberConfig.step}}" {{/if}} {{#if
                 numberConfig}}min="{{numberConfig.min}}" {{/if}} {{#if numberConfig}}max="{{numberConfig.max}}" {{#if
                 autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus
-                field)}}autofocus{{/if}}{{/if}} {{/if}} />
+                field)}}autofocus{{/if}}{{/if}} {{/if}} {{#if enterCal}}data-enter-cal="{{enterCal}}"{{/if}} />
             <span class="input-group-text" id="HtmlTotalId-{{field}}">Total</span>
         </div>
         {{else}}
@@ -26,7 +26,7 @@
             required}}required{{/if}} {{#if numberConfig}}step="{{numberConfig.step}}" {{/if}} {{#if
             numberConfig}}min="{{numberConfig.min}}" {{/if}} {{#if numberConfig}}max="{{numberConfig.max}}" {{#if
             autoFocus}}autofocus{{/if}} {{#if ../autoFocus}}{{#if (isEqual ../autoFocus field)}}autofocus{{/if}}{{/if}}
-            {{/if}} />
+            {{/if}} {{#if enterCal}}data-enter-cal="{{enterCal}}"{{/if}} />
         {{/if}}
         {{/if}}
         {{#if isDate}}
